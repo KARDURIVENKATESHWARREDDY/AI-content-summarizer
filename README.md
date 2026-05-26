@@ -59,6 +59,26 @@ streamlit run app.py
 
 Then open the local URL shown in the terminal.
 
+## Streamlit Cloud Deploy (Fix for GitHub URL Error)
+
+If Streamlit shows this error:
+
+> "The field needs to contain a Github URL pointing to a .py file"
+
+Use the **app file URL** (not just repo URL) in the GitHub URL field:
+
+`https://github.com/KARDURIVENKATESHWARREDDY/AI-content-summarizer/blob/main/streamlit_app.py`
+
+Alternative app file URL:
+
+`https://github.com/KARDURIVENKATESHWARREDDY/AI-content-summarizer/blob/main/app.py`
+
+Also set secrets in Streamlit Cloud:
+
+```toml
+GROQ_API_KEY="your_real_groq_api_key"
+```
+
 ## Notes
 
 - Default model used in the app: `llama-3.1-8b-instant`
